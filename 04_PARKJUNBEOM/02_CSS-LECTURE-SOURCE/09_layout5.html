@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>레이아웃 스타일5</title>
+    <style>
+        .item {
+            background-color: lightcoral;
+            color: white;
+            padding: 10px;
+            margin: 10px;
+        }
+
+        .container {
+            display: grid;
+            /* grid-template-colums: 그리드 아이템 너비 */
+            grid-template-columns: 200px 200px 200px;
+            grid-template-columns: 100px 200px auto;
+            /* fr(fraction) 단위로 처리 */
+            grid-template-columns: 1fr 1fr 1fr;
+            /* 반복되는 패턴이 있다면 repeat사용 */
+            grid-template-columns: repeat(4, 1fr);
+            /* gap : 그리드 아이템 사이의 여백 */
+            row-gap: 20px;
+            column-gap: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Grid로 타일 형태 정렬</h1>
+    <p>
+        Grid는 2차원으로 수평 수직을 동시에 영역을 나눌 수 있다.
+    </p>
+
+    <div class="container">
+        <div class="item">div 1</div>
+        <div class="item">div 2</div>
+        <div class="item">div 3</div>
+        <div class="item">div 4</div>
+        <div class="item">div 5</div>
+        <div class="item">div 6</div>
+        <div class="item">div 7</div>
+        <div class="item">div 8</div>
+        <div class="item">div 9</div>
+    </div>
+</body>
+</html>
